@@ -1,0 +1,31 @@
+nav {
+    background-color: white;
+    overflow: hidden;
+    outline: #ce1935 solid 1px;
+    position:sticky;
+}
+
+a {
+    font-family: "Arial";
+    color: black;
+    float: left;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #d0cfcf;
+    color: black;
+}
+
+nav a.active {
+    background-color: #941c2f;
+    color: white;
+}
+
+nav img {
+    display: block;
+    position: absolute;
+    margin-left: calc((100% - 100px) / 2);
+}
