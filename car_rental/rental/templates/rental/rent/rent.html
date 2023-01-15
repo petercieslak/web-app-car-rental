@@ -5,10 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car rental</title>
-    <link rel="stylesheet" href="{% static 'rental/home/style.css' %}">
+    <link rel="stylesheet" href="{% static 'rental/rent/style.css' %}">
 </head>
 <body>
-    <div class="main-container">
         {%include "rental/rent/navigation.html" %}
-    </div>
+        <form method="get" id="searchbar">
+            {{ form }}
+            <input type="submit" value="Search">
+            </select>
+        </form>
+        <div class="car-container">
+            {% for car in cars %}
+            <div class="car" onclick="location.href = '{{ car.id }}'">
+                    <img src="{{ car.image.url|slice:"7:" }}" width="194" height="120">
+                    <h5>{{ car.name|upper }}</h5>
+                    <h5>PRICE: {{ car.price }}</h5>
+            </div>
+            {% endfor %}
+        </div>
 </body>

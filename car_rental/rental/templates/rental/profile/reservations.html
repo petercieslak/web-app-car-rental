@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car rental</title>
+    <link rel="stylesheet" href="{% static 'rental/profile/profile.css' %}">
+</head>
+<body>
+    {%include "rental/profile/navigation.html" %}
+    <div id="user-content">
+    <h1>Welcome {{ user.username }}</h1>
+    {%include "rental/profile/user-navigation.html"%}
+        <div id="reservationsTable">
+            <h2>My reservations</h2>
+            <div id="reservations">
+                <div class="carImage"></div>
+                <div class="car"><h4>Car</h4></div>
+                <div class="startDate"><h4>Start date</h4></div>
+                <div class="endDate"><h4>End date</h4></div>
+                <div class="price"><h4>Price</h4></div>
+                {% for reservation in reservations %}
+                    <div class="carImage"><img src="{{ reservation.car.image.url|slice:"7:" }}" ></div>
+                    <div class="car">{{reservation.car.name}}</div>
+                    <div class="startDate">{{ reservation.startDate }}</div>
+                    <div class="endDate">{{ reservation.endDate }}</div>
+                    <div class="price">{{ reservation.car.price }}</div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car rental</title>
+    <link rel="stylesheet" href="{% static 'rental/rent/style.css' %}">
+</head>
+<body>
+    <div class="car-container">
+        {%include "rental/rent/navigation.html" %}
+        <table id="car-info">
+            <tr>
+                <td>
+                    <img src="{{ car.image.url|slice:"7:" }}" id="car-photo">
+                </td>
+                <td>
+                    <div id="car-specifics">
+                        <h3 id="car-model">{{ car.name }}</h3>
+                        <h3 class="other">Car type: <span> {{ car.type }}</span></h3>
+                        <h3 class="other">Fuel type: <span> {{ car.petrol }}</span></h3>
+                        <h3 class="other">Price: <span> {{ car.price }}</span></h3>
+                        <h3 class="other">Seats: {{ car.seats }}</h3>
+                        <div id="reserve-button" onclick="location.href = 'reservation'">MAKE A RESERVATION NOW</div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>

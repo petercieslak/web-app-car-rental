@@ -8,11 +8,19 @@
     <link rel="stylesheet" href="{% static 'rental/home/style.css' %}">
 </head>
 <body>
-    <div class="main-container">
         {%include "rental/home/navigation.html" %}
         <div class="home-content">
-            <h1 id="title">CAR2GO</h1>
+            <div id="top-banner">
+                <div id="banner-text">
+                <h1>Car Rental</h1>
+                <p>Find the best car for you</p>
+                </div>
+                <div id="banner-image">
+                    <img src="{% static 'rental/home/top-banner-img.png' %}" alt="car" height="200" width="400">
+                </div>
+            </div>
+            <div id="home-text">
             <p>Car rental is a company that rents cars for a short period of time, generally ranging from a few hours to a few weeks. It is often organized with numerous local branches (which allow a user to return a car to a different location), and primarily located near airports or busy city areas and often complemented by a website allowing online reservations.</p>
+            </div>
         </div>
-    </div>
 </body>
