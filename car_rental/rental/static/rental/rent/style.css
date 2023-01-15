@@ -1,0 +1,114 @@
+@import "../home/style.css";
+
+#searchbar {
+    background-color: #941c2f;
+    padding:10px 10px 10px 10px;
+    text-align: center;
+}
+
+#searchbar>* {
+    display: inline-block;
+    font-family: "Arial";
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+}
+
+#searchbar>label {
+    color: white;
+}
+
+.car {
+    background-color: #BFA5A4;
+    display: inline-block;
+    padding: 2px 2px 2px 2px;
+    margin: 15px 15px 15px 15px;
+    width: 200px;
+    height: 180px;
+    text-align: center;
+    font-family: "Arial Narrow";
+    font-weight: bold;
+    font-size: 1.2em;
+    border: black solid 2px;
+    cursor: pointer;
+}
+
+.car>* {
+    margin: 2px 2px 2px 2px;
+}
+
+.car>img {
+    border: black solid 2px;
+    margin: 0;
+}
+
+.car-container {
+    background-color: #941c2f;
+    width: 100%;
+}
+
+#car-info {
+    width: 100%;
+}
+
+#car-info>tbody>tr>td {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+#car-specifics {
+    display: block;
+    background-color: #897171;
+    width: 80%;
+    margin: 10%;
+    padding: 0;
+    border: black solid 2px;
+    overflow: auto;
+}
+
+#car-specifics>h3 {
+    font-family: "Arial Narrow";
+    font-weight: bold;
+}
+
+#car-specifics>.other {
+    text-align: left;
+    font-size: 1.6em;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 0;
+}
+
+#car-photo {
+    width: 80%;
+    height: 80%;
+    margin: 10%;
+    padding: 0;
+    border: black solid 2px;
+}
+
+#car-model {
+    font-size: 2em;
+    background-color: #BFA5A4;
+    margin:0% 0% 0% 0%;
+    border-bottom: black solid 2px;
+}
+
+#reserve-button {
+    background-color: #941c2f;
+    color: white;
+    font-family: "Arial Narrow";
+    font-weight: bold;
+    font-size: 1.2em;
+    border: black solid 2px;
+    cursor: pointer;
+    margin-left: 30%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0;
+    width: 40%;
+}
