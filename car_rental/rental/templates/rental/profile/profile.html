@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car rental</title>
+    <link rel="stylesheet" href="{% static 'rental/profile/profile.css' %}">
+</head>
+<body>
+    {%include "rental/profile/navigation.html" %}
+    <div id="user-content">
+    <h1>Welcome {{ user.username }}</h1>
+    {%include "rental/profile/user-navigation.html"%}
+        <div id="user-info">
+        <h2>Personal information:</h2>
+            <p>Username: {{ user.username }}</p>
+            <p>Email: {{ user.email }}</p>
+        </div>
+    </div>
+</body>

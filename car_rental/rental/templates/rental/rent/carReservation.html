@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car rental</title>
+    <link rel="stylesheet" href="{% static 'rental/rent/reservation/style.css' %}">
+    <script src="{% static 'rental/rent/reservation/formValidation.js' %}"></script>
+</head>
+<body>
+    {%include "rental/rent/navigation.html" %}
+    <div id="content-main">
+        <form method="post" id="reservationForm">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit" onclick="validateReservation()">Make reservation</button>
+        </form>
+        <div id="error"></div>
+    </div>
+</body>

@@ -5,5 +5,12 @@
     <a class="active" href="/home/rent">Rent</a>
     <a href="/home/contact">Contact</a>
     <a href="/home/about">About</a>
+    {% if user.is_authenticated %}
+    <a href="/home/logout" id="logout">Logout</a>
+    <a href="/home/profile/" id="profile">Profile</a>
+    {% else %}
+    <a href="/home/login" id="login">Login</a>
+    <a class='active' href="/home/register" id="register">Register</a>
+    {% endif %}
     <img src="{% static 'rental/navbar/car2go.png' %}" alt="car2go" class="logo" height="45">
 </nav>

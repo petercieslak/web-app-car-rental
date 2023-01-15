@@ -1,0 +1,50 @@
+@import "../../home/style.css";
+
+.errorlist {
+    display: none;
+}
+
+#content-main {
+    background-color: white;
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 5%;
+    border: black 2px solid;
+    font-family: Arial;
+}
+
+form {
+    background-color: white;
+}
+
+form > label, input {
+    display: block;
+    width: 50%;
+}
+
+form > label {
+    font-weight: bold;
+}
+
+form > * {
+    padding: 5px;
+    margin-left: 5px;
+    margin-bottom: 1px;
+}
+
+form > button {
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+#error {
+    display: block;
+    color: darkred;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+}

@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car rental</title>
+    <link rel="stylesheet" href="{% static 'rental/register/register.css' %}">
+</head>
+<body>
+    {%include "rental/register/navigation.html" %}
+    <div class="home-content">
+        <h1>Register</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ register_form }}
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>

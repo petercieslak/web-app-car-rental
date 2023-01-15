@@ -1,0 +1,8 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'rental/profile/usernav.css' %}">
+<script src="{% static 'rental/profile/userNavBarController.js' %}"></script>
+<nav class="usernav">
+    <a href="/home/profile" class="active" id="userProfile" onclick="changeActiveTab('userProfile')">Profile</a>
+    <a href="/home/profile/reservations" id="userReservations" onclick="changeActiveTab('userReservations')">My rentals</a>
+    <a href="/home/profile/edit" id="editProfile">Edit profile</a>
+</nav>
